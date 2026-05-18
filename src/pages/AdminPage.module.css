@@ -1,0 +1,100 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* 폼 테두리 영역 */
+.formBox {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+/* 입력 필드 2열 배치 */
+.inputGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+  margin-bottom: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.inputGroup label {
+  width: 60px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.inputGroup input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* 상품 등록 하단 안내문구 */
+.notice {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* 파란색 버튼 */
+.blueBtn {
+  float: right;
+  padding: 10px 40px;
+  background-color: #5b89ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 상품 삭제쪽 오른쪽 정렬을 위한 래퍼 */
+.btnRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 빨간색 버튼 */
+.redBtn {
+  padding: 10px 40px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* float 해제 */
+.formBox::after {
+  content: "";
+  display: block;
+  clear: both;
+}

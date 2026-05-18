@@ -1,26 +1,40 @@
-function Navbar() {
+import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom'; 
+import styles from './Navbar.module.css';
+
+const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation(); 
+
+  //  현재 주소가 '/admin'인지 확인
+  const isAdminPage = location.pathname === '/admin';
+
   return (
-    <header style={{ padding: '20px', borderBottom: '1px solid #ccc' }}>
+    <nav className={styles.navbar}>
+      {/* 왼쪽: 로고 아이콘 */}
+      <div className={styles.logoIcon} onClick={() => navigate('/')} />
+
+      {/* 가운데: 메뉴 리스트 (관리자 페이지가 아닐 때만 렌더링) */}
+      {!isAdminPage && (
+        <ul className={styles.menuList}>
+          <li className={styles.menuItem} onClick={() => navigate('/category')}>카테고리 필터링</li>
+          <li className={styles.menuItem} onClick={() => navigate('/price')}>가격 범위 필터링</li>
+          <li className={styles.menuItem} onClick={() => navigate('/sorting')}>상품 정렬</li>
+        </ul>
+      )}
+
       
-      <div>
-        <img src="/gdg-favicon.svg" alt="로고" width="100" />
-      </div>
-
-      {/* 1. 필터링 및 관리자 버튼들 */}
-      <div style={{ margin: '15px 0' }}>
-        <button>카테고리 필터링</button>
-        <button>가격 범위 필터링</button>
-        <button>상품 정렬</button>
-        <button>관리자</button>
-      </div>
-
-      {/* 2. 검색 영역 */}
-      <div>
-        <input type="text" placeholder="상품 검색..." />
-        <button>검색</button>
-      </div>
-    </header>
+      {isAdminPage ? (
+        <button className={styles.adminButton} onClick={() => navigate('/')}>
+          소비자
+        </button>
+      ) : (
+        <button className={styles.adminButton} onClick={() => navigate('/admin')}>
+          관리자
+        </button>
+      )}
+    </nav>
   );
-}
+};
 
 export default Navbar;

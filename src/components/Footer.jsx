@@ -1,10 +1,13 @@
-function Footer() {
+import styles from './Footer.module.css';
+
+const Footer = () => {
   return (
-    <footer style={{ backgroundColor: '#e0e0e0', padding: '15px', border: '1px solid #ccc' }}>
-      
-      <p>장바구니 구매하기</p>
+    <footer className={styles.footer}>
+      <button className={styles.buyButton}>
+        장바구니 구매하기
+      </button>
     </footer>
   );
-}
+};
 
 export default Footer;

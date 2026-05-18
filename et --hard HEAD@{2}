@@ -1,0 +1,10 @@
+[33mbb37a80[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mjin57[m[33m)[m HEAD@{0}: reset: moving to HEAD~2
+[33m28d99a5[m[33m ([m[1;31morigin/jin57[m[33m)[m HEAD@{1}: commit: 3주차 미션
+[33m711339d[m HEAD@{2}: commit: 3주차
+[33mbb37a80[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mjin57[m[33m)[m HEAD@{3}: commit: 2주차 미션
+[33m6402519[m HEAD@{4}: commit: 1주차 미션
+[33m8d3fa1a[m HEAD@{5}: commit: 1주차 미션
+[33mf24e130[m HEAD@{6}: commit: 테스트
+[33m84ac1fd[m HEAD@{7}: commit: 테스트
+[33mc8fef4e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{8}: checkout: moving from main to jin57
+[33mc8fef4e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{9}: clone: from https://github.com/jin57j/gdg-6th-fe-mission.git

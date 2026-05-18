@@ -1,0 +1,68 @@
+.itemCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 15px 25px;
+  margin-bottom: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.itemName {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.priceInfo {
+  font-size: 0.85rem;
+  color: #666;
+  display: flex;
+  gap: 10px;
+}
+
+.price {
+  font-weight: 600;
+  color: #333;
+}
+
+.actionSection {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.countInput {
+  width: 100px;
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.cartButton {
+  padding: 6px 20px;
+  background-color: #008cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cartButton:hover {
+  background-color: #0076d6;
+}
+
+
+.cartButton.disabled {
+  background-color: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
