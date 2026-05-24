@@ -5,11 +5,11 @@
 }
 
 .content {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
+  flex: 1;
 }
 
 .filterSection {
@@ -30,12 +30,6 @@
 
 .searchButton {
   padding: 0 25px;
-  background-color: #008cff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 .itemList {

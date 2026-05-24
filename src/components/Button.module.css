@@ -1,0 +1,49 @@
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* primary: 흰 배경, 파란 테두리 */
+.primary {
+  background-color: #ffffff;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+}
+.primary:hover {
+  background-color: #eff6ff;
+}
+
+/* secondary: 파란 배경, 흰 글씨 (기존의 styles.blueBtn) */
+.secondary {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+}
+.secondary:hover {
+  background-color: #2563eb;
+}
+
+/* danger: 빨간 배경, 흰 글씨 (기존의 styles.redBtn) */
+.danger {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+}
+.danger:hover {
+  background-color: #dc2626;
+}
+
+/* 비활성화 상태 */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #e5e7eb !important;
+  color: #9ca3af !important;
+  border: none !important;
+}

@@ -3,8 +3,8 @@ import { fetchCategoryData, fetchPriceSelectedData, fetchSortedData } from '../a
 
 export const useProductStore = create(set => ({
   items: [],
-  minPrice: '',
-  maxPrice: '',
+  minPrice: '0',
+  maxPrice: '0',
   isLoading: false,
 
   // 전체 또는 카테고리별 데이터 로드

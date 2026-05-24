@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Item from '../components/Item';
+import Button from '../components/Button'; // 공통 버튼 임포트
 import { useProductStore } from '../store/useProductStore';
 import styles from './PricePage.module.css';
 
@@ -35,9 +36,11 @@ const PricePage = () => {
             onChange={e => setMaxPrice(e.target.value)}
             placeholder="최대 가격"
           />
-          <button className={styles.searchButton} onClick={handleSearch}>
+
+          {/* 공통 버튼 컴포넌트 적용 */}
+          <Button variant="secondary" onClick={handleSearch}>
             검색
-          </button>
+          </Button>
         </div>
 
         <div className={styles.itemList}>
