@@ -1,40 +1,28 @@
-import { useState, useEffect } from 'react'; 
+import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Item from '../components/Item';
-import { fetchCategoryData } from '../apis/productApi';
+import { useProductStore } from '../store/useProductStore';
 import styles from './CategoryPage.module.css';
 
 const CategoryPage = () => {
-  const [items, setItems] = useState([]);
+  const { items, loadCategoryData } = useProductStore();
 
-  // 데이터를 서버에서 받아옵니다.
   useEffect(() => {
-    const getProducts = async () => {
-      const data = await fetchCategoryData(); // fetch 함수 실행
-      console.log("서버에서 온 데이터:", data);
-      if (data) {
-        setItems(data); 
-      }
-    };
-    getProducts();
-  }, []);
+    loadCategoryData();
+  }, [loadCategoryData]);
 
-  const handleCategoryClick = (name) => {
+  const handleCategoryClick = name => {
     console.log(`${name} 카테고리 클릭`);
+    // 추후 필요 시 카테고리 필터링 API 연동 가능
   };
 
   return (
     <div className={styles.container}>
       <Navbar />
-      
       <main className={styles.content}>
-        {/* 카테고리 선택 드롭다운  */}
         <div className={styles.filterSection}>
-          <select 
-            className={styles.select} 
-            onChange={(e) => handleCategoryClick(e.target.value)}
-          >
+          <select className={styles.select} onChange={e => handleCategoryClick(e.target.value)}>
             <option value="">카테고리 선택</option>
             <option value="의류">의류</option>
             <option value="전자기기">전자기기</option>
@@ -43,15 +31,13 @@ const CategoryPage = () => {
           </select>
         </div>
 
-        {/* 선택된 카테고리의 상품 리스트 */}
         <div className={styles.itemList}>
           <p className={styles.resultCount}>내 구매 내역</p>
-          {items.map((item) => (
+          {items.map(item => (
             <Item key={item.id} item={item} />
           ))}
         </div>
       </main>
-
       <Footer />
     </div>
   );

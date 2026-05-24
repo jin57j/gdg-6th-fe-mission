@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './Item.module.css';
 
 const Item = ({ item }) => {
