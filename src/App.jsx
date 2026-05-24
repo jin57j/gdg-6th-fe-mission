@@ -1,14 +1,14 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import MainPage from './pages/MainPage'; 
+import MainPage from './pages/MainPage';
 import CategoryPage from './pages/CategoryPage';
 import PricePage from './pages/PricePage';
 import SortingPage from './pages/SortingPage';
-import AdminPage from './pages/AdminPage'; 
+import AdminPage from './pages/AdminPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <MainPage />, 
+    element: <MainPage />,
   },
   {
     path: '/category',

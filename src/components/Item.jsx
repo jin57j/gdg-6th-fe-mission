@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import styles from './Item.module.css';
 
 const Item = ({ item }) => {
-  // 1. 수량 상태 
+  // 1. 수량 상태
   const [count, setCount] = useState('');
-  // 2. 장바구니 담기 완료 여부 
+  // 2. 장바구니 담기 완료 여부
   const [isAdded, setIsAdded] = useState(false);
 
   const handleAddToCart = () => {
@@ -33,8 +33,8 @@ const Item = ({ item }) => {
           placeholder="개수 입력..."
           className={styles.countInput}
           value={count}
-          onChange={(e) => setCount(e.target.value)}
-          disabled={isAdded} 
+          onChange={e => setCount(e.target.value)}
+          disabled={isAdded}
         />
         <button
           className={`${styles.cartButton} ${isAdded ? styles.disabled : ''}`}

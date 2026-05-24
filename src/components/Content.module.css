@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
-  min-height: 60vh; 
+  min-height: 60vh;
 }
 
 .searchSection {
@@ -16,15 +16,15 @@
 
 .searchInput {
   flex: 1;
-  padding: 8px 16px; 
+  padding: 8px 16px;
   border: 1px solid #ccc;
-  border-radius: 6px; 
+  border-radius: 6px;
   outline: none;
 }
 
 .searchButton {
   padding: 0 25px;
-  height: 38px; 
+  height: 38px;
   background-color: #008cff;
   color: white;
   border: none;
@@ -37,13 +37,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0.3; 
+  opacity: 0.3;
 }
 
 .bgLogo {
   width: 200px;
   height: 150px;
-  background-image: url('/gdg-favicon.svg'); 
+  background-image: url('/gdg-favicon.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
